@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<link rel='manifest' href='/manifest.json'>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<style>
+    footer,header{
+        background: #008dde;
+        color: #fbfbfb;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        text-align: center;
+        padding: 2em 0;
+        }
+    .wrapper{
+        max-width: 100%;
+        margin: 0 auto;
+        height: 500px;
+    }
+    @media only screen and (max-width:768px){
+    
+         .col1, .col2{
+            width:50%;
+        }
+         .col3{
+            width:100%;
+        }
+    }
+
+    @media only screen and (max-width:480px){
+         .col{
+           float: none;
+           width:100%;
+
+        }
+}
+</style>
+
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
+        ></script>
+<head>
+    <title>WA Dialer</title>
+    <!-- <h4 align="center">Unknown Whatsapp Messeger</h4> -->
+</head>
+
+<body>
+    <header>
+        <h4 align="center">Whatsapp Click to Chat</h4> 
+
+    </header>
+    <br><br><br>
+    <div class="wrapper">
+        <div align="center">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" name="result" type="text" pattern="-?[0-9]*(\.[0-9]+)?" placeholder="Phone number" id="phone">
+                <label class="mdl-textfield__label" for="phone">Number...</label>
+                <span class="mdl-textfield__error">Input is not a Phone number!</span>
+            </div>
+            <br>
+            <div class="mdl-textfield mdl-js-textfield" align="center">
+                <textarea name="mseg" class="mdl-textfield__input" type="text" rows="3" id="msg"></textarea>
+                <label class="mdl-textfield__label" for="msg">Enter your message here</label>
+            </div>
+        </div>
+        <br>
+        <div align="center">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary"
+                onclick="submitm()" id="j">
+                Submit with message
+            </button>
+        </div>
+        <br>
+    </div>
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo ">&copy N S S KOUSHIK</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a class="mdl-navigation__link"  href="https://faq.whatsapp.com/">Help</a></li>
+            <li><a class="mdl-navigation__link" href="https://www.whatsapp.com/legal/">Privacy & Terms</a></li>
+          </ul>
+        </div>
+        <div class="mdl-mini-footer__right-section">
+            <pwa-install>Install</pwa-install>
+        </div>
+      </footer>
+</body>
+
+</html>
+<script>
+    // This is the "Offline page" service worker
+
+// Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+// Check compatibility for the browser we're running this in
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    console.log("[PWA Builder] active service worker found, no need to register");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("pwabuilder-sw.js", {
+        scope: "./"
+      })
+      .then(function (reg) {
+        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+      });
+  }
+}
+
+
+
+
+    document.getElementById("phone").value=91
+    function submitm() {
+
+        const phone = document.getElementById("phone");
+        const msg = document.getElementById("msg");
+
+        const anchor = document.createElement("a");
+        anchor.href = "https://wa.me/" + phone.value + "?text=" + encodeURI(msg.value);
+        anchor.click();
+    }
+</script>
+
+
