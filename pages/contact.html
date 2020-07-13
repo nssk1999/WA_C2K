@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WhatsApp Click-To-Chat</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  crossorigin="anonymous" rel="stylesheet">
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#128C7E">
+  <meta name="theme-color" content="#075E54">
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="/">Whatsapp <span>Click to Chat</span></a>
+      <span class="right grey-text text-darken-1">
+        <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">WA-C2K</a></li>
+    <li><a href="/" class="waves-effect">Home</a></li>
+    <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="/pages/contact.html" class="waves-effect">
+      <i class="material-icons">mail_outline</i>Contact</a>
+    </li>
+    <li><a href="/pages/contact.html" class="waves-effect grey-text">
+      <i class="material-icons">developer_board</i>Developed by <em>N.S.S.K</em></a>
+    </li>
+  </ul>
+
+  <!-- content -->
+  <div class="container grey-text">
+    <h5 class="center">Contact Us</h5>
+    <p>This is a developer website. For more info you can reach us at <a href="http://seeblue.tk">seeblue.Inc</a></p>
+    <p>Developed by <b><em>N.S.S.KOUSHIK</em></b></p>
+    <div class="divider"></div>
+    <h6>Find us at:</h6>
+    <ul>
+      <li class="recipe-head" >SeeBlue</li>
+      <li>Hyderabad, 500062</li>
+      <li>Telangana</li>
+      <li>India, Earth</li>
+      <li>Solar System</li>
+      <li>Milkyway galaxy</li>
+    </ul>
+    <div class="divider"></div>
+    <br>
+    <button class="btn add-btn sidenav-trigger"  data-target="side-form"> Send Query</button>
+  </div>
+
+  <!-- add query side nav -->
+  <div id="side-form" class="sidenav side-form">
+    <form action="/pages/submit.php" class="add-query container section">
+      <h6 >Your query</h6>
+      <div class="divider"></div>
+      <div class="input-field">
+        <input placeholder="Your Name" id="name" name="name" type="text" class="validate">
+        <label for="title">Name</label>
+      </div>
+      <div class="input-field">
+        <input placeholder="xxx@xx.xx" id="mail" type="email" name="mail" class="validate">
+        <label for="ingredients">Your e-mail id</label>
+      </div>
+      <div class="input-field ">
+        <textarea id="msg" class="materialize-textarea" name="message" data-length="120"></textarea>
+        <label for="msg">Your Qurey</label>
+      </div>
+      <div class="input-field center">
+        <button type="submit" class="btn-small">Submit</button>
+      </div>
+    </form>
+  </div>
+
+
+  <script src="/js/app.js"></script>
+  <script src="/js/ui.js"></script>
+</body>
+</html>
