@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>WA C2K</title>
+    <title>TG C2K</title>
     <meta name="generator" content="Seeblue.Inc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="click to chat for whatsapp">
+    <meta name="description" content="click to chat for telegram">
 
     <base href="/">
 
-    <link rel="icon" href="imag/favicon.ico" type = "image/x-icon">
+    <link rel="icon" href="imag/telegram.svg" type = "image/x-icon">
 
     <!-- See https://goo.gl/OOhYW5 -->
     <link rel="manifest" href="manifest.json">
@@ -39,8 +39,8 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- Default twitter cards -->
-    <meta name="twitter:card" content="A Click to chat for whatsapp">
-    <meta name="twitter:site" content="@nssk1999">
+    <meta name="twitter:card" content="A Click to chat for whatsapp by @nssk1999">
+    <meta name="twitter:site" content="pwa-c2k.web.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="my-app">
     <meta property="og:image" content="img/icons/icon-144x144.png" />
@@ -77,6 +77,12 @@
         min-height: 100vh;
         -webkit-font-smoothing: antialiased;
       }
+      :root{
+        --primary: #26abff;
+        --secondary: #00007E;
+        --title: #07305e;
+        --install-button-color: black;
+      }
     </style>
   </head>
   <body>
@@ -87,7 +93,7 @@
   <!-- top nav -->
   <nav class="z-depth-0">
     <div class="nav-wrapper container">
-      <a href="/">Whatsapp <span>Click-to-Chat</span></a>
+      <a href="/pages/telegram.html">Telegram <span>Click-to-Chat</span></a>
       <!-- <pwa-install showopen>Install</pwa-install> -->
       <span class="right grey-text text-darken-1">
         <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
@@ -97,8 +103,8 @@
 
   <!-- side nav -->
   <ul id="side-menu" class="sidenav side-menu">
-    <li><a class="subheader">WA-C2K</a></li>
-    <li><a href="/" class="waves-effect">Home</a></li>
+    <li><a class="subheader">TG-C2K</a></li>
+    <li><a href="/" class="waves-effect">C2k-Whatsapp</a></li>
     <li><a href="/pages/telegram.html" class="waves-effect">C2k-Telegram</a></li>
     <li><a href="/pages/gcal.html" class="waves-effect">Add to Calender</a></li>
     <li><a href="/pages/about.html" class="waves-effect">About</a></li>
@@ -120,15 +126,15 @@
             id="Bold" 
             enable-background="new 0 0 24 24" 
             height="50" 
-            fill="#075E54"
+            fill="#26abff"
             viewBox="0 0 24 24" 
             width="50" 
             xmlns="http://www.w3.org/2000/svg">
             <path 
-                d="m17.507 14.307-.009.075c-2.199-1.096-2.429-1.242-2.713-.816-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.293-.506.32-.578.878-1.634.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.576-.05-.997-.042-1.368.344-1.614 1.774-1.207 3.604.174 5.55 2.714 3.552 4.16 4.206 6.804 5.114.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z"
+            d="m12 24c6.617 0 12-5.383 12-12s-5.383-12-12-12-12 5.383-12 12 5.383 12 12 12zm0-22.5c5.79 0 10.5 4.71 10.5 10.5s-4.71 10.5-10.5 10.5-10.5-4.71-10.5-10.5 4.71-10.5 10.5-10.5z"
             />
             <path 
-                d="m20.52 3.449c-7.689-7.433-20.414-2.042-20.419 8.444 0 2.096.549 4.14 1.595 5.945l-1.696 6.162 6.335-1.652c7.905 4.27 17.661-1.4 17.665-10.449 0-3.176-1.24-6.165-3.495-8.411zm1.482 8.417c-.006 7.633-8.385 12.4-15.012 8.504l-.36-.214-3.75.975 1.005-3.645-.239-.375c-4.124-6.565.614-15.145 8.426-15.145 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99z"
+                d="m7.896 14.155 1.568-.681-.44.441c-.141.141-.22.332-.22.53v2.935c0 .672.812.998 1.28.53l1.574-1.574 3.43 1.715c.444.222.981-.041 1.073-.537l1.957-10.761c.103-.579-.467-1.047-1.012-.833l-12.716 4.977c-.57.222-.646 1.002-.13 1.331l2.934 1.872c.21.134.475.155.702.055zm8.506-6.347-1.537 8.455-3.02-1.509c-.292-.146-.64-.085-.865.141l-.676.676v-.813l3.007-3.007c.583-.583-.073-1.545-.829-1.218l-4.817 2.09-1.354-.864z"
             />
         </svg>
         </div>
@@ -136,18 +142,18 @@
       <div class="row">
         
         <div class="input-field col s12 m12 l8 ">
-          <input id="phone" type="tel" class="validate" pattern="-?[0-9+\(\) ]*(\.[0-9]+)?" >
-          <label for="phone">Phone No. </label>
-          <span class="helper-text" data-error="Please Enter a Valid Phone Number" data-success="right">...</span>
+          <input id="user" type="text" class="validate" >
+          <label for="user">Username . </label>
+          <span class="helper-text" data-error="Please Enter a Valid Phone Number" data-success="right"></span>
         </div>
         <br><br><br>
-        <div class="input-field col s12 m12 l8 ">
+        <!-- <div class="input-field col s12 m12 l8 ">
           <textarea id="msg" class="materialize-textarea" data-length="120"></textarea>
           <label for="msg">Message</label>
-        </div>
+        </div> -->
         <br>
         <div class="col s7 m10 l8 ">
-          <button onclick="submitm()" class="waves-effect waves-light scale-transition btn"><i class="material-icons right">send</i>send</button>
+          <button onclick="submittl()" class="waves-effect waves-light blue scale-transition btn"><i class="material-icons right">send</i>send</button>
         </div>
         <!-- <br><br><br><br><br><br><br><br> -->
         <div class="col s5 m2 l4 ">
@@ -158,9 +164,7 @@
       </div>
     </div>
   </main>
-  <script>
-    document.getElementById("phone").value="+91"
-  </script>
+  
   <script src="/js/app.js"></script>
   <script src="/js/ui.js"></script>
   </body>

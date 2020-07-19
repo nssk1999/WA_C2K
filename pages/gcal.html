@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>WA C2K</title>
+    <title>Event share Google calender</title>
     <meta name="generator" content="Seeblue.Inc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="click to chat for whatsapp">
+    <meta name="description" content="An add to calender for Google calender link">
 
     <base href="/">
 
@@ -39,8 +39,8 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- Default twitter cards -->
-    <meta name="twitter:card" content="A Click to chat for whatsapp">
-    <meta name="twitter:site" content="@nssk1999">
+    <meta name="twitter:card" content="A event creation link for Google calender">
+    <meta name="twitter:site" content="https://pwa-c2k.web.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="my-app">
     <meta property="og:image" content="img/icons/icon-144x144.png" />
@@ -77,6 +77,12 @@
         min-height: 100vh;
         -webkit-font-smoothing: antialiased;
       }
+      :root{
+        --primary: #26abff;
+        --secondary: #00007E;
+        --title: #07305e;
+        --install-button-color: black;
+      }
     </style>
   </head>
   <body>
@@ -87,7 +93,7 @@
   <!-- top nav -->
   <nav class="z-depth-0">
     <div class="nav-wrapper container">
-      <a href="/">Whatsapp <span>Click-to-Chat</span></a>
+      <a href="/pages/gcal.html">Add to <span>Calender</span></a>
       <!-- <pwa-install showopen>Install</pwa-install> -->
       <span class="right grey-text text-darken-1">
         <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
@@ -98,7 +104,7 @@
   <!-- side nav -->
   <ul id="side-menu" class="sidenav side-menu">
     <li><a class="subheader">WA-C2K</a></li>
-    <li><a href="/" class="waves-effect">Home</a></li>
+    <li><a href="/" class="waves-effect">C2k-Whatsapp</a></li>
     <li><a href="/pages/telegram.html" class="waves-effect">C2k-Telegram</a></li>
     <li><a href="/pages/gcal.html" class="waves-effect">Add to Calender</a></li>
     <li><a href="/pages/about.html" class="waves-effect">About</a></li>
@@ -117,37 +123,78 @@
         <div class="col s1">
           <!-- <img src="/img/whatsapp.svg" alt="Whatsapp" height="50" width="50" > -->
           <svg 
-            id="Bold" 
-            enable-background="new 0 0 24 24" 
-            height="50" 
-            fill="#075E54"
-            viewBox="0 0 24 24" 
-            width="50" 
-            xmlns="http://www.w3.org/2000/svg">
-            <path 
-                d="m17.507 14.307-.009.075c-2.199-1.096-2.429-1.242-2.713-.816-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.293-.506.32-.578.878-1.634.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.576-.05-.997-.042-1.368.344-1.614 1.774-1.207 3.604.174 5.55 2.714 3.552 4.16 4.206 6.804 5.114.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z"
-            />
-            <path 
-                d="m20.52 3.449c-7.689-7.433-20.414-2.042-20.419 8.444 0 2.096.549 4.14 1.595 5.945l-1.696 6.162 6.335-1.652c7.905 4.27 17.661-1.4 17.665-10.449 0-3.176-1.24-6.165-3.495-8.411zm1.482 8.417c-.006 7.633-8.385 12.4-15.012 8.504l-.36-.214-3.75.975 1.005-3.645-.239-.375c-4.124-6.565.614-15.145 8.426-15.145 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99z"
-            />
+            version="1.1" 
+            id="Capa_1" 
+            xmlns="http://www.w3.org/2000/svg" 
+            xmlns:xlink="http://www.w3.org/1999/xlink" 
+            x="0px" y="0px"
+            viewBox="0 0 326.4 326.4" 
+            style="enable-background:new 0 0 326.4 326.4;" 
+            xml:space="preserve">
+            <path style="fill:#DEF3F9;" d="M270.596,32.4h9.2c14.4,0,26.4,12,26.4,26.4v235.6c0,14.4-11.6,26.4-26.4,26.4h-232.8
+              c-14.4,0-26-12-26-26.4V58.8c0-14.4,11.6-26.4,26-26.4h9.6C56.596,32.4,270.596,32.4,270.596,32.4z"/>
+            <g>
+              <path style="fill:#76BDD3;" d="M279.796,32.4h-9.2h-214.4h-9.6c-14.4,0-26,12-26,26.4v39.6h285.6V58.8
+                C306.196,44.4,294.196,32.4,279.796,32.4z"/>
+              <ellipse style="fill:#76BDD3;" cx="163.396" cy="206.4" rx="68.8" ry="69.6"/>
+            </g>
+            <g>
+              <path style="fill:#DEF3F9;" d="M84.996,44.4c0,8-6.4,14.4-14.4,14.4l0,0c-8,0-14.4-6.4-14.4-14.4V32.8V20.4c0-8,6.4-14.4,14.4-14.4
+                l0,0c8,0,14.4,6.4,14.4,14.4V44.4z"/>
+              <path style="fill:#DEF3F9;" d="M270.596,44.4c0,8-6.4,14.4-14.4,14.4l0,0c-8,0-14.4-6.4-14.4-14.4v-24c0-8,6.4-14.4,14.4-14.4l0,0
+                c8,0,14.4,6.4,14.4,14.4V44.4z"/>
+            </g>
+            <g>
+              <path style="fill:#427C7F;" d="M279.796,26.8h-4v-6.4c0-11.2-8.8-20.4-20-20.4s-20,9.2-20,20.4v6.4h-145.2v-6.4
+                c0-11.2-8.8-20.4-20-20.4s-20,9.2-20,20.4v6.4h-4c-17.6,0-31.6,14.4-31.6,32v235.6c0,17.6,14.4,32,31.6,32h233.2
+                c17.6,0,31.6-14.4,31.6-32V58.8C311.796,41.2,297.396,26.8,279.796,26.8z M256.196,11.6c4.8,0,8.8,4,8.8,8.8v24
+                c0,4.8-4,8.8-8.8,8.8s-8.8-4-8.8-8.8v-12l0,0l0,0v-12C247.396,15.6,251.396,11.6,256.196,11.6z M70.596,11.6c4.8,0,8.8,4,8.8,8.8
+                v24c0,4.8-4,8.8-8.8,8.8s-8.8-4-8.8-8.8v-12l0,0l0,0v-12C61.796,15.6,65.796,11.6,70.596,11.6z M46.996,38h4v6.4
+                c0,11.2,8.8,20.4,20,20.4s20-9.2,20-20.4V38h145.6v6.4c0,11.2,8.8,20.4,20,20.4s20-9.2,20-20.4V38h4c11.2,0,20.8,9.2,20.8,20.8v34
+                h-275.2v-34C26.196,47.6,35.396,38,46.996,38z M279.796,315.6h-232.8c-11.2,0-20.8-9.2-20.8-20.8V104.4h274.4v190.4
+                C300.596,306.4,291.396,315.6,279.796,315.6z"/>
+              <path style="fill:#427C7F;" d="M237.796,206.4c0-41.6-33.6-75.2-74.4-75.2c-41.2,0-74.4,33.6-74.4,75.2l0,0l0,0
+                c0,41.6,33.6,75.2,74.4,75.2l0,0l0,0C204.596,281.6,237.796,248,237.796,206.4L237.796,206.4L237.796,206.4z M168.996,270v-10
+                c0-3.2-2.4-5.6-5.6-5.6c-3.2,0-5.6,2.4-5.6,5.6v10c-30.4-2.4-54.8-27.2-57.6-58h9.6l0,0c3.2,0,5.6-2.4,5.6-5.6s-2.4-5.6-5.6-5.6
+                h-9.6c2.8-30.8,27.2-55.6,57.6-58v10c0,3.2,2.4,5.6,5.6,5.6s5.6-2.4,5.6-5.6v-10c30.4,2.8,54.8,27.2,57.6,58h-9.6
+                c-3.2,0-5.6,2.4-5.6,5.6s2.4,5.6,5.6,5.6h9.6C223.796,242.8,199.396,267.6,168.996,270z"/>
+              <path style="fill:#427C7F;" d="M163.396,162.8c-3.2,0-5.6,2.4-5.6,5.6v36l-14.4,17.2c-2,2.4-1.6,6,0.8,8c1.2,0.8,2.4,1.2,3.6,1.2
+                c1.6,0,3.2-0.8,4.4-2l15.6-18.8c0.8-1.2,1.2-2.4,1.2-3.6v-38C168.996,165.2,166.596,162.8,163.396,162.8z"/>
+            </g> 
         </svg>
         </div>
       </div>
       <div class="row">
         
         <div class="input-field col s12 m12 l8 ">
-          <input id="phone" type="tel" class="validate" pattern="-?[0-9+\(\) ]*(\.[0-9]+)?" >
-          <label for="phone">Phone No. </label>
-          <span class="helper-text" data-error="Please Enter a Valid Phone Number" data-success="right">...</span>
+          <input id="tittle" type="text" class="validate" >
+          <label for="tittle">Tittle</label>
+          <span class="helper-text" data-error="Please Enter a Valid Phone Number" data-success="right"></span>
         </div>
         <br><br><br>
         <div class="input-field col s12 m12 l8 ">
-          <textarea id="msg" class="materialize-textarea" data-length="120"></textarea>
-          <label for="msg">Message</label>
+          <input id="fromdate" type="datetime-local" class="validate"  >
+          <label for="fromdate">From</label>
+          <span class="helper-text" data-error="Please Enter a Valid Phone Number" data-success="right">Please Enter according to  GMT (Greenwich Mean Time) </span>
+        </div>
+        <div class="input-field col s12 m12 l8 ">
+          <input id="todate" type="datetime-local" class="validate"  >
+          <label for="todate">To</label>
+          <span class="helper-text" data-error="Please Enter a Valid Phone Number" data-success="right">Please Enter according to  GMT (Greenwich Mean Time) </span>
+        </div>
+        <div class="input-field col s12 m12 l8 ">
+          <textarea id="dpn" class="materialize-textarea" data-length="120"></textarea>
+          <label for="dpn">Description</label>
+        </div>
+        <br>
+        <div id="glink" class="input-field col s12 m12 l8 hide ">
+          <textarea id="link" class="materialize-textarea" data-length="120"></textarea>
+          <label for="link">Generated link</label>
+          <span class="helper-text" data-error="Please Enter a Valid Phone Number" data-success="right">Copied to ClipBorad.</span>
         </div>
         <br>
         <div class="col s7 m10 l8 ">
-          <button onclick="submitm()" class="waves-effect waves-light scale-transition btn"><i class="material-icons right">send</i>send</button>
+          <button onclick="generate()" class="waves-effect blue waves-light scale-transition btn"><i class="material-icons right">send</i>Generate</button>
         </div>
         <!-- <br><br><br><br><br><br><br><br> -->
         <div class="col s5 m2 l4 ">
@@ -159,7 +206,7 @@
     </div>
   </main>
   <script>
-    document.getElementById("phone").value="+91"
+    // document.getElementById("glink").style.display="none";
   </script>
   <script src="/js/app.js"></script>
   <script src="/js/ui.js"></script>

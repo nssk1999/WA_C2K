@@ -4,6 +4,8 @@
   --secondary: #128C7E;
   --title: #075E54;
   --install-button-color: black;
+  --bodybg:white;
+  --textcolor:black;
 }
 
 .wrapper{
@@ -70,6 +72,7 @@ nav .sidenav-trigger{
   background: var(--title) !important;
 }
 input{
+  color: var(--textcolor);
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
 }
@@ -89,6 +92,7 @@ body {
 
 main {
   flex: 1 0 auto;
+  background-color: var(--bodybg);
 }
 
 /* svg::hover {
